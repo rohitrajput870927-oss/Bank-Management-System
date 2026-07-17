@@ -37,7 +37,6 @@ public class Login extends JFrame {
         add(label3);
 
 
-
         ImageIcon ii1=new ImageIcon(ClassLoader.getSystemResource("icon/card.png"));//hamne system se nikal ke store kara di ii1 me
         Image ii2=ii1.getImage().getScaledInstance(100,100,Image.SCALE_FAST);//It takes an image and creates a 100×100 pixel resized version of it.
         ImageIcon ii3=new ImageIcon(ii2);//for visible on the frame
