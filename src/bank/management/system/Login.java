@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Login extends JFrame {
-    JLabel label1;
+    JLabel label1,label2,label3;
 
     Login(){
         super("Bank Management System");
@@ -15,6 +15,26 @@ public class Login extends JFrame {
         JLabel image=new JLabel(i3);//
         image.setBounds(350,10,100,100);
         add(image);
+
+
+        label1 = new JLabel("WELCOME TO ATM");
+        label1.setForeground(Color.WHITE);
+        label1.setFont(new Font("AvantGarde", Font.BOLD, 38));
+        label1.setBounds(230,125,450,40);
+        add(label1);
+
+        label2 = new JLabel("Card No:");
+        label2.setFont(new Font("Ralway", Font.BOLD, 28));
+        label2.setForeground(Color.WHITE);
+        label2.setBounds(150,190,375,30);
+        add(label2);
+
+
+        label3=new JLabel("PIN");
+        label3.setFont(new Font("rohit",Font.BOLD,28));
+        label3.setForeground(Color.WHITE);
+        label3.setBounds(150,250,375,30);
+        add(label3);
 
 
 
@@ -35,11 +55,8 @@ public class Login extends JFrame {
         add(image2);
 
 
-        label1 = new JLabel("WELCOME TO ATM");
-        label1.setForeground(Color.WHITE);
-        label1.setFont(new Font("AvantGarde", Font.BOLD, 38));
-        label1.setBounds(230, 125, 450, 40);
-        add(label1);
+
+
 
         setLayout(null);
         setSize(850,480);
