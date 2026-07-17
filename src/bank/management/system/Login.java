@@ -9,6 +9,8 @@ public class Login extends JFrame {
     Login(){
         super("Bank Management System");
 
+
+
         ImageIcon i1=new ImageIcon(ClassLoader.getSystemResource("icon/bank.png"));
         Image i2=i1.getImage().getScaledInstance(100,100, Image.SCALE_DEFAULT);
         ImageIcon i3=new ImageIcon(i2);//for visible on the frame
