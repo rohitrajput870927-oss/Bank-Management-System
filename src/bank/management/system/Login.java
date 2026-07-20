@@ -2,9 +2,17 @@ package bank.management.system;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class Login extends JFrame {
+public class Login extends JFrame  implements ActionListener {
     JLabel label1,label2,label3;
+
+    JTextField textField2;
+
+    JPasswordField passwordField3;
+
+    JButton button1,button2,button3;
 
     Login(){
         super("Bank Management System");
@@ -32,11 +40,49 @@ public class Login extends JFrame {
         add(label2);
 
 
+        textField2 =new JTextField( 15);
+        textField2.setBounds(325,190,230,30);
+        textField2.setFont(new Font("Arial",Font.BOLD,14));
+        add(textField2);
+
+
         label3=new JLabel("PIN");
         label3.setFont(new Font("rohit",Font.BOLD,28));
         label3.setForeground(Color.WHITE);
         label3.setBounds(150,250,375,30);
         add(label3);
+
+        passwordField3=new JPasswordField(15);
+        passwordField3.setBounds(325,250,230,30);
+        passwordField3.setFont(new Font("Arial",Font.BOLD,15));
+        add(passwordField3);
+
+        button1=new JButton("Sign in");
+        button1.setFont(new Font("Arial",Font.BOLD,15));
+        button1.setForeground(Color.WHITE);
+        button1.setBackground(Color.BLACK);
+        button1.setBounds(300,300,100,30);
+        button1.addActionListener(this);
+        add(button1);
+
+
+        button2=new JButton("CLEAR");
+        button2.setFont(new Font("Arial",Font.BOLD,15));
+        button2.setForeground(Color.WHITE);
+        button2.setBackground(Color.BLACK);
+        button2.setBounds(430,300,100,30);
+        button2.addActionListener(this);
+        add(button2);
+
+
+        button3=new JButton("SING UP");
+        button3.setFont(new Font("Arial",Font.BOLD,15));
+        button3.setForeground(Color.WHITE);
+        button3.setBackground(Color.BLACK);
+        button3.setBounds(300,350,230,30);
+        button3.addActionListener(this);
+        add(button3);
+
 
 
         ImageIcon ii1=new ImageIcon(ClassLoader.getSystemResource("icon/card.png"));//hamne system se nikal ke store kara di ii1 me
@@ -47,7 +93,6 @@ public class Login extends JFrame {
         add(image1);//image add ho gaya
 
 
-
         ImageIcon iii1=new ImageIcon(ClassLoader.getSystemResource("icon/backbg.png"));
         Image iii2=iii1.getImage().getScaledInstance(850,480,Image.SCALE_DEFAULT);
         ImageIcon iii3=new ImageIcon(iii2);
@@ -56,21 +101,32 @@ public class Login extends JFrame {
         add(image2);
 
 
-
-
-
         setLayout(null);
         setSize(850,480);
         setLocation(450,200);
         setVisible(true);//jo bhi chiz hame visible karani hai use ham set visiblity ke upar hi rakhege hamesa
 
 
-
-
     }
 
 
+    @Override
+    public void actionPerformed(ActionEvent e) {//actionListener batayega ActionEvent ko ki kis button pe click hua hai or e ke andar aa ke button ka command store ho jayega
+        try{
+            if(e.getSource()==button1){
 
+            } else if (e.getSource()==button2) {
+                textField2.setText("");
+                passwordField3.setText("");
+
+            } else if (e.getSource()==button3) {
+
+            }
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
 
     static void main() {
         new Login();
